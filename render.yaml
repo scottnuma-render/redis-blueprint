@@ -3,4 +3,6 @@ version: 1
 
 redises:
 - name: lightning
+  plan: pro
+  region: oregon
 
