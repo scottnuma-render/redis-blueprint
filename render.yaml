@@ -25,6 +25,5 @@ redises:
 - name: lightning
   plan: pro
   region: oregon
-  maxmemoryPolicy: volatile-random
 
 
