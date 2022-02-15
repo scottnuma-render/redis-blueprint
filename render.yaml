@@ -17,7 +17,7 @@ services:
         value: 6379
 
 redises:
-- name: lightning
+- name: lightningMcqueen
   plan: pro
   region: oregon
 
