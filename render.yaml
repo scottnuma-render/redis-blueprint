@@ -1,9 +1,30 @@
 ---
 version: 1
 
+services:
+  # A Docker web service
+  - type: web
+    name: webdis
+    env: docker
+    repo: https://github.com/render-examples/webdis.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter)
+    branch: master # optional (uses repo default)
+    dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
+    numInstances: 3 # optional (defaults to 1)
+    healthCheckPath: /
+    envVars:
+      - key: REDIS_HOST
+        fromRedis:
+          name: lightning
+          property: host 
+      - key: REDIS_PORT
+        value: 6379
+
 redises:
 - name: lightning
   plan: pro
   region: oregon
   maxmemoryPolicy: volatile-random
+
 
