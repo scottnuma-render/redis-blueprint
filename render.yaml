@@ -7,12 +7,6 @@ services:
     name: webdis
     env: docker
     repo: https://github.com/render-examples/webdis.git # optional
-    region: oregon # optional (defaults to oregon)
-    plan: standard # optional (defaults to starter)
-    branch: master # optional (uses repo default)
-    dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
-    numInstances: 3 # optional (defaults to 1)
-    healthCheckPath: /
     envVars:
       - key: REDIS_HOST
         fromRedis:
