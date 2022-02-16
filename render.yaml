@@ -14,10 +14,16 @@ services:
           name: lightning
           property: host 
       - key: REDIS_PORT
-        value: 6379
+        fromRedis:
+          name: lightning
+          property: port 
+      - key: REDIS_CONNECTION_STRING
+        fromRedis:
+          name: lightning
+          property: connectionString 
 
 redises:
-- name: lightningMcqueen
+- name: lightning
   plan: pro
   region: oregon
 
