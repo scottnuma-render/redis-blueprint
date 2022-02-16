@@ -13,14 +13,6 @@ services:
         fromRedis:
           name: lightning
           property: host 
-      - key: REDIS_PORT
-        fromRedis:
-          name: lightning
-          property: port 
-      - key: REDIS_CONNECTION_STRING
-        fromRedis:
-          name: lightning
-          property: connectionString 
 
 redises:
 - name: lightning
