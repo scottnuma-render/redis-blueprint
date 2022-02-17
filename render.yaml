@@ -18,5 +18,6 @@ redises:
 - name: lightning
   plan: pro
   region: oregon
+- name: thunder
 
 
