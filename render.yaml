@@ -27,6 +27,7 @@ services:
   - type: web
     name: sinatra app
     env: ruby
+    repo: https://github.com/render-examples/sidekiq.git
     buildCommand: bundle install
     startCommand: bundle exec ruby main.rb
     envVars:
