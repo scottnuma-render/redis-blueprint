@@ -5,13 +5,7 @@ redises:
 - name: lightning
   plan: pro
   region: oregon
-  ipAllowList:
-  - source: 35.197.5.153
-    description: home
-  - source: 35.230.55.230/32
-    description: office
-  - source: 216.24.57.0/30
-    description: vpn
+  maxmemoryPolicy: noeviction
 - name: thunder
 
 
