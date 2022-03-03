@@ -16,5 +16,8 @@ redises:
 - name: thunder
   ipAllowList:
   - source: 35.197.5.153
+- name: imagine
+  ipAllowList: []
+
 
 
