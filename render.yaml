@@ -5,7 +5,7 @@ redises:
 - name: lightning
   plan: pro
   region: oregon
-  maxmemoryPolicy: noeviction
+  maxmemoryPolicy: allkeys-lru
   ipAllowList:
   - source: 35.197.5.153
     description: home
