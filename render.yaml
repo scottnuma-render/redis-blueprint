@@ -13,9 +13,10 @@ redises:
     description: office
   - source: 216.24.57.0/30
     description: vpn
+  - source: 216.38.137.180
 - name: thunder
   ipAllowList:
-  - source: 35.197.5.153
+  - source: 0.0.0.0/0
 - name: imagine
   ipAllowList: []
 
