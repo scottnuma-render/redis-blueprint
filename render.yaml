@@ -13,11 +13,12 @@ redises:
     description: office
   - source: 216.24.57.0/30
     description: vpn
-  - source: 216.38.137.182
+  - source: 216.38.137.183
 - name: thunder
   maxmemoryPolicy: volatile-ttl
   ipAllowList:
   - source: 0.0.0.0/0
+    description: errbody
 - name: imagine
   ipAllowList: []
   maxmemoryPolicy: volatile-ttl
