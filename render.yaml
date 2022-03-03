@@ -15,10 +15,12 @@ redises:
     description: vpn
   - source: 216.38.137.182
 - name: thunder
+  maxmemoryPolicy: volatile-ttl
   ipAllowList:
   - source: 0.0.0.0/0
 - name: imagine
   ipAllowList: []
+  maxmemoryPolicy: volatile-ttl
 
 
 
