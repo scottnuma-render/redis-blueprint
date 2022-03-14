@@ -1,8 +1,9 @@
 ---
 version: 1
 
-redises:
+services:
 - name: lightning
+  type: redis
   plan: pro
   region: oregon
   maxmemoryPolicy: volatile-ttl
@@ -15,11 +16,13 @@ redises:
     description: vpn
   - source: 216.38.137.183
 - name: thunder
+  type: redis
   maxmemoryPolicy: volatile-ttl
   ipAllowList:
   - source: 0.0.0.0/0
     description: errbody
 - name: imagine
+  type: redis
   ipAllowList: []
   maxmemoryPolicy: volatile-ttl
 
