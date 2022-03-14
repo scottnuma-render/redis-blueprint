@@ -6,11 +6,11 @@ services:
   type: redis
   plan: pro
   region: oregon
-  maxmemoryPolicy: volatile-ttl
+  maxmemoryPolicy: noeviction
   ipAllowList:
   - source: 35.197.5.153
     description: home
-  - source: 35.230.55.230/32
+  - source: 35.230.55.231/32
     description: office
   - source: 216.24.57.0/30
     description: vpn
@@ -20,11 +20,11 @@ services:
   maxmemoryPolicy: volatile-ttl
   ipAllowList:
   - source: 0.0.0.0/0
-    description: errbody
+    description: errone
 - name: imagine
   type: redis
   ipAllowList: []
-  maxmemoryPolicy: volatile-ttl
+  maxmemoryPolicy: dragons
 
 
 
