@@ -26,6 +26,7 @@ services:
   ipAllowList: []
   maxmemoryPolicy: noeviction
 - type: pserv
+  typo: sure
   name: redis
   env: docker
   disk:
