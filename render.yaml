@@ -23,6 +23,7 @@ services:
     description: errone
 - name: imagine
   type: redis
+  ipAllowLIst: []
   maxmemoryPolicy: noeviction
 - type: pserv
   name: redis
