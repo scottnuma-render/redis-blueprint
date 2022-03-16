@@ -25,25 +25,3 @@ services:
   type: redis
   ipAllowList: []
   maxmemoryPolicy: noeviction
-- type: pserv
-  # typo: sure
-  name: redis
-  env: docker
-  disk:
-    name: data
-    mountPath: /var/lib/redis
-    sizeGB: 10
-
-databases:
-  - name: elephant
-    nemo: typo
-    databaseName: mydb # optional (Render may add a suffix)
-    user: adrian # optional
-    ipAllowList: # optional (defaults to allow all)
-      - source: 203.0.113.4/30
-        description: office
-      - source: 198.51.100.1
-        description: home
-
-
-
