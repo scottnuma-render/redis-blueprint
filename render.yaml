@@ -26,6 +26,10 @@ services:
   ipAllowList: []
   maxmemoryPolicy: noeviction
     #
+- type: worker
+  name: webdis
+  env: docker
+
 # A Docker web service
 - type: web
   name: webdis
