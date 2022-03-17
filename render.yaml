@@ -35,7 +35,7 @@ services:
   plan: standard # optional (defaults to starter)
   branch: master # optional (uses repo default)
   dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
-  numInstances: 3 # optional (defaults to 1)
+  numInstances: 1 # optional (defaults to 1)
   healthCheckPath: /
   envVars:
     - key: THUNDER_HOST
