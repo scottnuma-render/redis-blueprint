@@ -58,11 +58,11 @@ services:
         name: imagine
         type: redis
         property: port
-    - key: IMAGINE_DNE
-      fromService:
-        name: imagine
-        type: redis
-        property: dne
+    # - key: IMAGINE_DNE
+    #   fromService:
+    #     name: imagine
+    #     type: redis
+    #     property: dne
     - key: REDIS_HOST
       fromService:
         name: lightning
@@ -78,8 +78,8 @@ services:
         name: notARedis
         type: redis
         property: port
-    - key: DNE_TYPE
-      fromService:
-        name: notARedis
-        type: sdfds
-        property: port
+    # - key: DNE_TYPE
+    #   fromService:
+    #     name: notARedis
+    #     type: sdfds
+    #     property: port
