@@ -25,3 +25,61 @@ services:
   type: redis
   ipAllowList: []
   maxmemoryPolicy: noeviction
+    #
+# A Docker web service
+- type: web
+  name: webdis
+  env: docker
+  repo: https://github.com/render-examples/webdis.git # optional
+  region: oregon # optional (defaults to oregon)
+  plan: standard # optional (defaults to starter)
+  branch: master # optional (uses repo default)
+  dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
+  numInstances: 3 # optional (defaults to 1)
+  healthCheckPath: /
+  envVars:
+    - key: THUNDER_HOST
+      fromService:
+        name: thunder
+        type: redis
+        property: host # available properties are listed below
+    - key: THUNDER_PORT
+      fromService:
+        name: thunder
+        type: redis
+        property: port
+    - key: THUNDER_CONNECTION_STRING
+      fromService:
+        name: thunder
+        type: redis
+        property: connectionString
+    - key: IMAGINE_HOST
+      fromService:
+        name: imagine
+        type: redis
+        property: port
+    - key: IMAGINE_DNE
+      fromService:
+        name: imagine
+        type: redis
+        property: dne
+    - key: REDIS_HOST
+      fromService:
+        name: lightning
+        type: redis
+        property: host # available properties are listed below
+    - key: REDIS_PORT
+      fromService:
+        name: lightning
+        type: redis
+        property: port
+    - key: DNE_PORT
+      fromService:
+        name: notARedis
+        type: redis
+        property: port
+    - key: DNE_TYPE
+      fromService:
+        name: notARedis
+        type: sdfds
+        property: port
