@@ -73,11 +73,11 @@ services:
         name: lightning
         type: redis
         property: port
-    - key: DNE_PORT
-      fromService:
-        name: notARedis
-        type: redis
-        property: port
+    # - key: DNE_PORT
+    #   fromService:
+    #     name: notARedis
+    #     type: redis
+    #     property: port
     # - key: DNE_TYPE
     #   fromService:
     #     name: notARedis
