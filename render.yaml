@@ -3,9 +3,28 @@ version: 1
 
 previewsEnabled: true
 services:
+  # A Docker web service
+  - type: web
+    name: webdis
+    env: docker
+    repo: https://github.com/render-examples/webdis.git # optional
+    dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
+    healthCheckPath: /
+    envVars:
+      - key: REDIS_HOST
+        fromService:
+          type: redis
+          name: lightning
+          property: host # available properties are listed below
+      - key: REDIS_PORT
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - fromGroup: conc-settings
   # Redis 1 - all fields defined
   - type: redis
-    name: thunder
+    name: lightning
     ipAllowList: 
       - source: 0.0.0.0
         description: everywhere
