@@ -24,7 +24,7 @@ services:
   # Redis 1 - all fields defined
   - type: redis
     name: lightning
-    plan: starter
+    plan: free
     ipAllowList: 
       - source: 0.0.0.0
         description: everywhere
